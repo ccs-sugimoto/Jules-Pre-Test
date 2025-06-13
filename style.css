@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0; /* ブラウザのデフォルトマージンをリセット */
+    padding-top: 20px; /* 上部に少し余白 */
+}
+
+h1 {
+    color: #333;
+}
+
+#gameCanvas {
+    background-color: #fff;
+    /* borderはHTMLで指定済み */
+}
+
+#scoreArea {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+#nextTetrominoArea {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#nextTetrominoArea h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#nextTetrominoCanvas {
+    background-color: #fff;
+    /* borderはHTMLで指定済み */
+}
