@@ -1,12 +1,32 @@
 body {
     font-family: sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center; /* 中央揃え */
+    min-height: 100vh; /* 画面全体の高さを使う */
     background-color: #f0f0f0;
     margin: 0; /* ブラウザのデフォルトマージンをリセット */
-    padding-top: 20px; /* 上部に少し余白 */
-    position: relative; /* #nextTetrominoAreaのabsoluteの基準 */
+    padding: 20px; /* 全体に少し余白 */
+    box-sizing: border-box; /* paddingを含めて幅計算 */
+}
+
+#titleScreen {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#titleScreen h1 {
+    margin-bottom: 20px; /* ボタンとの間隔 */
+}
+
+#gameScreen {
+    display: flex; /* ゲームキャンバスと次のミノエリアを横並びにする */
+    align-items: flex-start; /* 上端揃え */
+    justify-content: center; /* 中央揃え */
+    /* display: none; はHTML側で初期設定 */
 }
 
 h1 {
@@ -16,6 +36,7 @@ h1 {
 #gameCanvas {
     background-color: #fff;
     /* borderはHTMLで指定済み */
+    margin-right: 20px; /* 次のミノエリアとの間隔 */
 }
 
 #scoreArea {
@@ -26,12 +47,13 @@ h1 {
 }
 
 #nextTetrominoArea {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    /* position: absolute; を削除 */
     border: 1px solid black;
     padding: 10px;
     text-align: center;
+    background-color: white; /* 背景色を追加 */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 軽い影 */
 }
 
 #timeArea {
@@ -48,4 +70,8 @@ h1 {
 #nextTetrominoCanvas {
     background-color: #fff;
     /* borderはHTMLで指定済み */
+}
+
+.hidden {
+    display: none !important;
 }
